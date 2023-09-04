@@ -24,16 +24,22 @@ require("config.personal")
 
 
 
+-- 前期准备
 
+-- 如果使用anaconda 管理python，先配好python再首次运行nvim
 
 -- 涉及到 nvim 插件，需要准备下列环境：
---	=====>nodejs：建议使用 nvm 包管理器，安装nvm，使用nvm install <version>，不用再安装其他nodejs
---	=====>nvm安装命令：wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
---			yarn:						npm install -g yarn
+-- =====>nodejs：建议使用 nvm 包管理器，安装nvm，使用nvm install <version>，不用再安装其他nodejs
+-- =====>nvm安装命令：wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+-- npm install -g yarn
+-- npm install -g neovim
+-- pip install pynvim
+-- yarn global add neovim
+
 
 
 -- git.lua 里的配置需要 安装lazygit		https://github.com/jesseduffield/lazygit	brew install lazygit
 
 
-
+-- 安装sqlite			brew install sqlite
 
