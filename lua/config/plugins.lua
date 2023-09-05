@@ -6,10 +6,10 @@
 -- /_/            /____/                
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/08/25
+-- LastModify: 2023/09/05
 
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
