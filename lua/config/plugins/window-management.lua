@@ -7,7 +7,7 @@ return {
 	{
 		"nyngwang/NeoZoom.lua",
 		config = function()
-			vim.keymap.set("n", "<leader>w", ":NeoZoomToggle<CR>", { silent = true, nowait = true })			-- <leader>w 切换窗口 缩放模式
+			vim.keymap.set("n", "<leader>m", ":NeoZoomToggle<CR>", { silent = true, nowait = true })			-- <leader>m 切换窗口 缩放模式
 			require("neo-zoom").setup {
 				popup = { enabled = true }, -- this is the default.
 				-- NOTE: Add popup-effect (replace the window on-zoom with a `[No Name]`).
