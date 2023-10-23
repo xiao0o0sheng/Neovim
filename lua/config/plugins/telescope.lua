@@ -16,7 +16,7 @@ M = {
 				end
 			},
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
-				"nvim-telescope/telescope-ui-select.nvim",
+				--"nvim-telescope/telescope-ui-select.nvim",
 			{
 				"stevearc/dressing.nvim",
 				opts = {},
@@ -24,15 +24,15 @@ M = {
 		},
 		config = function()
 			local builtin = require('telescope.builtin')
-			vim.keymap.set('n', 'ff', builtin.find_files, { noremap = true, nowait = true })				-- ff	文件	后续可以用 joshuto
-			vim.keymap.set('n', 'fb', builtin.buffers, { noremap = true, nowait = true })					-- fb	缓冲区	
-			vim.keymap.set('n', 'fh', builtin.help_tags, { noremap = true, nowait = true })					-- fh	帮助文档
-			vim.keymap.set('n', 'fd', builtin.diagnostics, { noremap = true, nowait = true })				-- fd	诊断信息
-			vim.keymap.set('n', 'fz', builtin.colorscheme, { noremap = true, nowait = true })				-- fz	配色主题列表
-			vim.keymap.set('n', 'fc', builtin.commands, { noremap = true, nowait = true })					-- fc	Vim 命令列表
-			vim.keymap.set('n', 'fl', builtin.command_history, { noremap = true, nowait = true })			-- fl	Vim 历史命令列表
-			vim.keymap.set('n', 'fs', builtin.search_history, { noremap = true, nowait = true })			-- fs	搜索历史
-			vim.keymap.set('n', 'fk', builtin.keymaps, { noremap = true, nowait = true })					-- fk	快捷映射
+			vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true, nowait = true })				-- <leader>ff	文件	后续可以用 joshuto
+			vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true, nowait = true })					-- <leader>fb	缓冲区	
+			vim.keymap.set('n', '<leader>fh', builtin.help_tags, { noremap = true, nowait = true })					-- <leader>fh	帮助文档
+			vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { noremap = true, nowait = true })				-- <leader>fd	诊断信息
+			vim.keymap.set('n', '<leader>fz', builtin.colorscheme, { noremap = true, nowait = true })				-- <leader>fz	配色主题列表
+			vim.keymap.set('n', '<leader>fc', builtin.commands, { noremap = true, nowait = true })					-- <leader>fc	Vim 命令列表
+			vim.keymap.set('n', '<leader>fl', builtin.command_history, { noremap = true, nowait = true })			-- <leader>fl	Vim 历史命令列表
+			vim.keymap.set('n', '<leader>fs', builtin.search_history, { noremap = true, nowait = true })			-- <leader>fs	搜索历史
+			vim.keymap.set('n', '<leader>fk', builtin.keymaps, { noremap = true, nowait = true })					-- <leader>fk	快捷映射
 			
 			local trouble = require("trouble.providers.telescope")
 			local ts = require('telescope')
@@ -107,10 +107,10 @@ M = {
 				}
 			})
 
-			ts.load_extension("yank_history")
+			--ts.load_extension("yank_history")
 			ts.load_extension("dap")
 			ts.load_extension("telescope-tabs")
-			ts.load_extension("fzf")
+			--ts.load_extension("fzf")
 			ts.load_extension("commander")
 		end
 	},
@@ -153,49 +153,49 @@ M = {
 				{
 					desc = "文件",
 					cmd = "<CMD>Telescope find_files<CR>",
-					keys = { "n", "ff", noremap },
+					keys = { "n", "<leader>ff", noremap },
 				},
 				{
 					desc = "缓冲区",
 					cmd = "<CMD>Telescope buffers<CR>",
-					keys = { "n", "fb", noremap },
+					keys = { "n", "<leader>fb", noremap },
 				},
 				{
 					desc = "帮助文档",
 					cmd = "<CMD>Telescope help_tags<CR>",
-					keys = { "n", "fh", noremap },
+					keys = { "n", "<leader>fh", noremap },
 				},
 				{
 					desc = "诊断信息",
 					cmd = "<CMD>Telescope diagnostics<CR>",
-					keys = { "n", "fd", noremap },
+					keys = { "n", "<leader>fd", noremap },
 				
 				},
 				{
 					desc = "配色主题",
 					cmd = "<CMD>Telescope colorscheme<CR>",
-					keys = { "n", "fz", noremap },
+					keys = { "n", "<leader>fz", noremap },
 				
 				},
 				{
 					desc = "命令",
 					cmd = "<CMD>Telescope commands<CR>",
-					keys = { "n", "fc", noremap },
+					keys = { "n", "<leader>fc", noremap },
 				},
 				{
 					desc = "历史命令",
 					cmd = "<CMD>Telescope command_history<CR>",
-					keys = { "n", "fl", noremap },
+					keys = { "n", "<leader>fl", noremap },
 				},
 				{
 					desc = "搜索历史",
 					cmd = "<CMD>Telescope search_history<CR>",
-					keys = { "n", "fs", noremap },
+					keys = { "n", "<leader>fs", noremap },
 				},
 				{
 					desc = "快捷键映射",
 					cmd = "<CMD>Telescope keymaps<CR>",
-					keys = { "n", "fk", noremap },
+					keys = { "n", "<leader>fk", noremap },
 				},
 				{
 					desc = "新建标签页",
