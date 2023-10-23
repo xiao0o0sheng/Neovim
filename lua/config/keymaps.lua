@@ -6,7 +6,8 @@
 --           /____/            /_/            
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/08/25
+-- LastModify: 2023/09/06
+
 
 local mode_nv = { "n", "v" }
 local mode_v = { "v" }
@@ -21,16 +22,16 @@ local nmappings = {
 	{ from = "mh",             	to = ":verbose map " },										-- mh		后面跟快捷键位，查看快捷键位的引用
 
 	-- 窗口
-	{ from = "sh",            	to = ":set nosplitright<CR>:vsplit<CR>", },					-- sh	向 左 分屏
-	{ from = "sj",            	to = ":set splitbelow<CR>:split<CR>", },	    			-- sj	向 下 分屏
-	{ from = "sk",            	to = ":set nosplitbelow<CR>:split<CR>", },					-- sk	向 上 分屏
-	{ from = "sl",            	to = ":set splitright<CR>:vsplit<CR>", },	    			-- sl	向 右 分屏
-	{ from = "wh",				to = ":vertical resize-5<CR>", },							-- wh	窗口 宽度 缩小 5 单位
-	{ from = "wj",				to = "<C-j> :res -5<CR>", },								-- wj	窗口 高度 缩小 5 单位
-	{ from = "wk",				to = "<C-j> :res +5<CR>", },								-- wk	窗口 高度 扩展 5 单位
-	{ from = "wl",				to = ":vertical resize+5<CR>", },							-- wl	窗口 宽度 扩展 5 单位
-	{ from = "wt",				to = "<c-w>K", },											-- wt	当前窗口移动到新的标签页
-	{ from = "ww",				to = "<c-w>o", },											-- ww	当前窗口最大化
+	{ from = "<leader>sh",            	to = ":set nosplitright<CR>:vsplit<CR>", },					-- <leader>sh	向 左 分屏
+	{ from = "<leader>sj",            	to = ":set splitbelow<CR>:split<CR>", },	    			-- <leader>sj	向 下 分屏
+	{ from = "<leader>sk",            	to = ":set nosplitbelow<CR>:split<CR>", },					-- <leader>sk	向 上 分屏
+	{ from = "<leader>sl",            	to = ":set splitright<CR>:vsplit<CR>", },	    			-- <leader>sl	向 右 分屏
+	{ from = "<leader>wh",				to = ":vertical resize-5<CR>", },							-- <leader>wh	窗口 宽度 缩小 5 单位
+	{ from = "<leader>wj",				to = "<C-j> :res -5<CR>", },								-- <leader>wj	窗口 高度 缩小 5 单位
+	{ from = "<leader>wk",				to = "<C-j> :res +5<CR>", },								-- <leader>wk	窗口 高度 扩展 5 单位
+	{ from = "<leader>wl",				to = ":vertical resize+5<CR>", },							-- <leader>wl	窗口 宽度 扩展 5 单位
+	{ from = "<leader>wt",				to = "<c-w>K", },											-- <leader>wt	当前窗口移动到新的标签页
+	{ from = "<leader>ww",				to = "<c-w>o", },											-- <leader>ww	当前窗口最大化
 
 
 	-- 移动
@@ -47,7 +48,7 @@ local nmappings = {
 
 	-- 标签页
 	{ from = "tt",				to = ":tabnew<CR>",	 },										-- tt 新建 标签页
-	{ from = "ts",				to = ":tab split<CR>", },									-- tn 将当前窗口分离为一个新的标签页
+	{ from = "ts",				to = ":tab split<CR>", },									-- ts 将当前窗口分离为一个新的标签页
 	{ from = "tc",				to = ":tabclose<CR>", },									-- tc 关闭 当前 标签页
 	{ from = "ta",				to = ":tabonly<CR>", },										-- ta 关闭 其他 标签页
 	{ from = "th",				to = ":-tabnext<CR>", },									-- th 切换到 上一个 标签页
@@ -57,7 +58,7 @@ local nmappings = {
 	-- 搜索
 	{ from = "=",				to = "nzz", },												-- n 跳转到 下一个 搜索结果
 	{ from = "-",				to = "Nzz", },												-- n 跳转到 上一个 搜索结果
-	{ from = "<leader><CR>",	to = ":nohlsearch<CR>", },									-- Space+Enter 取消搜过高亮
+	{ from = "<leader><CR>",	to = ":nohlsearch<CR>", },									-- Space+Enter 取消搜索高亮
 
 	
 
