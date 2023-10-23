@@ -2,7 +2,7 @@
 
 > **Author:** **xiao0o0sheng**
 >
-> **Update date:** *2023/10/17*
+> **Update date:** *2023/10/23*
 
 
 *person.lua 需要根据自己的配置自己修改*
