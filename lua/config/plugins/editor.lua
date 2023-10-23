@@ -1,5 +1,58 @@
 return {
 	{
+		"stevearc/conform.nvim",														-- 格式化插件
+		event = "VeryLazy",
+		config = function()
+			local status, conform = pcall(require, "conform")
+			if not status then
+				vim.notify("not found conform")
+				return
+			end
+			conform.setup({
+				formatters_by_ft = {
+					c = { "clang_format" },
+					go = {
+						formatters = { "gofumpt", "goimports" },
+						run_all_formatters = true,
+					},
+					html = { "prettierd" },
+					json = { "prettierd" },
+					jsonc = { "prettierd" },
+					rust = { "rustfmt" },
+					bash = { "shfmt" },
+					lua = { "stylua" },
+					-- Conform will use the first available formatter in the list
+					javascript = { "prettierd" },
+					typescript = { "prettierd" },
+					javascriptreact = { "prettierd" },
+					typescriptreact = { "prettierd" },
+					vue = { "prettierd" },
+					-- Formatters can also be specified with additional options
+					python = {
+						formatters = { "isort", "black" },
+						-- Run formatters one after another instead of stopping at the first success
+						run_all_formatters = true,
+					},
+					zig = { "zigfmt" },
+					markdown = {
+						"prettierd",
+						"markdownlint",
+					},
+				},
+				-- 保存文件时格式化文件
+				format_on_save = {
+					lsp_fallback = true,
+					timeout_ms = 500,
+				},
+				format_after_save = {
+					lsp_fallback = true,
+				},
+				log_level = vim.log.levels.ERROR,
+				notify_on_error = true,						-- 格式化出错时提示错误
+			})
+		end
+	},
+	{
 		"RRethy/vim-illuminate",																				-- 自动高亮 跟当前光标 一致 的文本
 		config = function()
 			require('illuminate').configure({
@@ -74,7 +127,7 @@ return {
 			vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")											-- 小写p		在光标后粘贴剪贴板中的内容
 			vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")											-- 大写P		在光标前粘贴剪贴板内容
 			vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")										-- gp(p小写)	在光标后粘贴剪贴板中的内容并保持插入模式
-			vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")										-- gP(P大写)	P在光标前粘贴剪贴板中的内容并保持插入模式
+			vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")										-- gP(P大写)	在光标前粘贴剪贴板中的内容并保持插入模式
 
 			require('yanky').setup({
 				ring = {
