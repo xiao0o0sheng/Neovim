@@ -1,4 +1,4 @@
-# Neovim 用法
+# neovim 用法
 
 > **Author:** **xiao0o0sheng**
 >
