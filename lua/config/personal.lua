@@ -11,24 +11,24 @@
 --                        /____/                                     
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/08/25
+-- LastModify: 2024/07/14
 
 
 
-vim.g.snips_author = "xiao0o0sheng"									-- 设置 snippets 的作者信息
-vim.g.python3_host_prog = "/usr/bin/python3"		-- 设置 Vim 调用的python解释器路径
-vim.g.mkdp_browser = "chromium"										-- 设置 mkdp 插件使用的浏览器为 Chromium
-vim.g.mkdp_browserfunc = "open"										-- Linux: xdg-open, MacOS: open, Windows: start
+vim.g.snips_author = "xiao0o0sheng"										-- 设置 snippets 的作者信息
+vim.g.python3_host_prog = "/usr/bin/python3"							-- 设置 Vim 调用的python解释器路径
+-- vim.g.mkdp_browser = "chromium"										-- 设置 mkdp 插件使用的浏览器为 Chromium
+-- vim.g.mkdp_browserfunc = "open"										-- Linux: xdg-open, MacOS: open, Windows: start
 
 
 -- Dracula Pro color scheme(需要dracula_pro 文件)
 -- mkdir -p ~/.local/share/nvim/site/pack/themes/start
 -- cp -r dracula_pro ~/.local/share/nvim/site/pack/themes/start/dracula_pro
-vim.cmd("set packpath+=~/.local/share/nvim/site")					-- 确保 packpath 指向正确的路径
-vim.cmd("packadd! dracula_pro")										-- 加载 dracula_pro
-vim.cmd("syntax enable")											-- 启用语法高亮
-vim.g.dracula_colorterm = 0											-- 终端禁用 dracula_pro 方案
-vim.cmd("colorscheme dracula_pro_blade")							-- 默认使用 dracula_pro_blade 主题配色
+vim.cmd("set packpath+=~/.local/share/nvim/site")						-- 确保 packpath 指向正确的路径
+vim.cmd("packadd! dracula_pro")											-- 加载 dracula_pro
+vim.cmd("syntax enable")												-- 启用语法高亮
+vim.g.dracula_colorterm = 0												-- 终端禁用 dracula_pro 方案
+vim.cmd("colorscheme dracula_pro_blade")								-- 默认使用 dracula_pro_blade 主题配色
 -- vim.cmd("colorscheme deus")											-- 默认使用 deus 主题配色
 
 
@@ -48,7 +48,7 @@ function SetFileTitle()
         "@File:            " .. vim.fn.expand("%"),
         "@Software:        Neovim " .. version,
         "@Author:          xiao0o0sheng",
-        "@Email:           xiaosheng.jin@ericsson.com",
+        "@Email:           xiaosheng7@126.com",
         "@Version:         ",
         "@Description:     ",
         "-----------------------------------------------------------------",
@@ -83,7 +83,7 @@ function SetFileTitle()
         comment_symbol = '// '
         lines[2] = "TypeScript"
 	else
-		lines = {}													-- 若不是以上 脚本 文件，则不添加 title 信息
+		lines = {}														-- 若不是以上 脚本 文件，则不添加 title 信息
     end
 
     for i = 1, #lines - 4 do
@@ -91,7 +91,7 @@ function SetFileTitle()
     end
 
     vim.api.nvim_buf_set_lines(0, 0, 14, false, lines)
-    vim.cmd([[normal G]])										-- 光标置尾
+    vim.cmd([[normal G]])												-- 光标置尾
 end
 
 -- <<<<<<<<<< Title Setting  <<<<<<<<<<

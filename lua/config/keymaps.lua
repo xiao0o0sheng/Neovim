@@ -6,7 +6,7 @@
 --           /____/            /_/            
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/09/06
+-- LastModify: 2024/07/14
 
 
 local mode_nv = { "n", "v" }

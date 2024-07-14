@@ -6,19 +6,13 @@
 --           /____/                                       
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/08/25
+-- LastModify: 2024/07/14
 
 
 require("config.defaults")
 require("config.keymaps")
 require("config.plugins")
 require("config.personal")
-
-
-
-
-
-
 
 
 

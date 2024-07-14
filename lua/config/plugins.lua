@@ -6,7 +6,7 @@
 -- /_/            /____/                
 
 -- Author: @xiao0o0sheng
--- LastModify: 2023/09/05
+-- LastModify: 2024/07/14
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -35,7 +35,7 @@ require("lazy").setup({
 	require("config.plugins.fun"),							-- cellular-automaton.nvim
 	require("config.plugins.fzf"),							-- 模糊搜索匹配神器
 	require("config.plugins.git"),							-- git插件，使用的插件 gitsigns.nvim 、lazygit.nvim
-	require("config.plugins.go"),							-- go 语言插件，使用的插件 go.nvim 、guihua.lua 、nvim-lspconfig 、nvim-treesitter
+	-- require("config.plugins.go"),							-- go 语言插件，使用的插件 go.nvim 、guihua.lua 、nvim-lspconfig 、nvim-treesitter
 	require("config.plugins.indent"),						-- 高亮缩进线,并且还可以根据当前光标所处的位置,高亮所在代码块，使用的插件 hlchunk.nvim
 	require("config.plugins.joshuto"),						-- 文件浏览插件，使用的插件 joshuto.nvim
 	require("config.plugins.leap"),							-- 搜索增强插件，使用的插件 flash.nvim
@@ -50,7 +50,7 @@ require("lazy").setup({
 	require("config.plugins.statusline"),					-- 状态栏、标签栏
 	require("config.plugins.telescope"),					-- 搜索增强插件，高度可扩展的模糊查找器，使用的插件 telescope.nvim 、plenary.nvim 、telescope-tabs 、telescope-fzf-native.nvim 、dressing.nvim 、telescope-simulators.nvim 、command_center.nvim 等
 	require("config.plugins.treesitter"),					-- 显示插件
-	require("config.plugins.winbar"),					-- 显示插件  =====>>> require Neovim >= 0.10.0-dev
+	require("config.plugins.winbar"),						-- 显示插件  =====>>> require Neovim >= 0.10.0-dev
 	require("config.plugins.window-management"),			-- 窗口管理插件
 })
 

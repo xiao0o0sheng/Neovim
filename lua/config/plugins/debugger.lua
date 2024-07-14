@@ -4,6 +4,7 @@ return {
 		dependencies = {
 			"theHamsta/nvim-dap-virtual-text",
 			"rcarriga/nvim-dap-ui",
+			"nvim-neotest/nvim-nio",
 			"nvim-dap-virtual-text",
 			"nvim-telescope/telescope-dap.nvim",
 		},
